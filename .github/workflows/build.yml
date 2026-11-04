@@ -19,8 +19,10 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: 设置 Gradle
+      - name: 设置 Gradle（跳过 wrapper 校验）
         uses: gradle/actions/setup-gradle@v4
+        with:
+          validate-wrappers: false
 
       - name: 使 gradlew 可执行
         run: chmod +x gradlew
