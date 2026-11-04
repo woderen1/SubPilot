@@ -24,8 +24,8 @@ jobs:
         with:
           validate-wrappers: false
 
-      - name: 使 gradlew 可执行
-        run: chmod +x gradlew
+      - name: 使 gradlew 和 wrapper jar 可执行
+        run: chmod +x gradlew gradle/wrapper/gradle-wrapper.jar
 
       - name: 构建 Debug APK
         run: ./gradlew assembleDebug
